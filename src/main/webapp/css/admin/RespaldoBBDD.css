@@ -1,0 +1,310 @@
+/* ===================================================
+   🎨 Paleta de Colores (Variables)
+=================================================== */
+:root {
+    --azul-marino: #003366;
+    --azul-marino-claro: #004488;
+    --amarillo-estrella: #FFA500;
+    --amarillo-oscuro: #CC8400;
+    --rojo-coral: #E74C3C;
+    --rojo-oscuro: #C0392B;
+    --gris-oscuro: #2C3E50;
+    --gris-oscuro-claro: #3d5266;
+    --gris-claro: #F4F4F4;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --verde-exito: #28a745;
+    --naranja-proceso: #fd7e14;
+  }
+  
+/* ======================== */
+/* === FOOTER GENERAL === */
+/* ======================== */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: var(--azul-marino);
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 18px;
+  color: var(--blanco);
+}
+  
+  /* ===================================================
+     🚀 Panel Principal
+  =================================================== */
+  .panel-container {
+    background: var(--gris-claro);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.18), 0 0 0 2px var(--gris-oscuro-claro);
+    border: 1px solid var(--gris-oscuro-claro);
+    padding: 2em 2.5em 2.5em 2.5em;
+    margin: 2.5em auto 0 auto;
+    max-width: 1200px;
+    min-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2.5rem;
+  }
+  @media (max-width: 600px) {
+    .panel-container {
+      margin-top: 1em;
+    }
+  }
+  
+  /* ===================================================
+     👤 Información del Usuario
+  =================================================== */
+  .user-info {
+    background-color: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .img-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 3px solid var(--azul-marino);
+  }
+  .welcome-text {
+    font-size: 1.2rem;
+    color: var(--gris-oscuro);
+  }
+  .nombre-usuario {
+    color: var(--azul-marino);
+    font-weight: bold;
+  }
+  
+  /* ===================================================
+     📌 Navbar General
+  =================================================== */
+  .navbar {
+    background: var(--azul-marino);
+    color: #fff;
+    padding: 0.5em 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Navbar - LG+ */
+  @media (min-width: 992px) {
+    .navbar-nav {
+      gap: 8rem;
+    }
+    .navbar-nav > .nav-item.flex-grow-1 {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-width: 0;
+      width: 100%;
+    }
+  
+    .navbar-nav > .nav-item.d-lg-block .nav-link,
+    .navbar-nav > .nav-item.d-lg-block .dropdown-toggle {
+      background: var(--blanco) !important;
+      color: var(--azul-marino) !important;
+      border-radius: 5px;
+      transition: all 0.2s;
+      border: 2px solid var(--azul-marino);
+      font-weight: 500;
+      min-width: 180px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .navbar-nav > .nav-item.d-lg-block .nav-link:hover,
+    .navbar-nav > .nav-item.d-lg-block .dropdown-toggle:hover,
+    .navbar-nav > .nav-item.d-lg-block .nav-link.active {
+      background: var(--azul-marino) !important;
+      color: var(--blanco) !important;
+      border-color: var(--blanco);
+    }
+  
+    .navbar-nav > .nav-item.d-lg-block .dropdown-menu {
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    .navbar-nav > .nav-item.d-lg-block .dropdown-menu .dropdown-item {
+      color: var(--azul-marino);
+      background: var(--blanco);
+      border-radius: 5px;
+      margin: 2px 0;
+      transition: all 0.2s;
+    }
+    .navbar-nav > .nav-item.d-lg-block .dropdown-menu .dropdown-item:hover {
+      background: var(--azul-marino);
+      color: var(--blanco);
+    }
+  }
+  
+  /* Navbar - MD (Tablet) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar-nav > .nav-item.d-md-block .nav-link,
+    .navbar-nav > .nav-item.d-md-block .dropdown-toggle {
+      background: var(--blanco) !important;
+      color: var(--azul-marino) !important;
+      border-radius: 5px;
+      transition: all 0.2s;
+      border: 2px solid var(--azul-marino);
+      font-weight: 500;
+      min-width: 180px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-align: center;
+      white-space: nowrap;
+      margin: 0 0.5rem;
+    }
+    .navbar-nav > .nav-item.d-md-block .nav-link:hover,
+    .navbar-nav > .nav-item.d-md-block .dropdown-toggle:hover,
+    .navbar-nav > .nav-item.d-md-block .nav-link.active {
+      background: var(--azul-marino) !important;
+      color: var(--blanco) !important;
+      border-color: var(--blanco);
+    }
+    .navbar-nav > .nav-item.d-md-block .dropdown-menu {
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    .navbar-nav > .nav-item.d-md-block .dropdown-menu .dropdown-item {
+      color: var(--azul-marino);
+      background: var(--blanco);
+      border-radius: 5px;
+      margin: 2px 0;
+      transition: all 0.2s;
+    }
+    .navbar-nav > .nav-item.d-md-block .dropdown-menu .dropdown-item:hover {
+      background: var(--azul-marino);
+      color: var(--blanco);
+    }
+  }
+  
+  /* Navbar - SM (Móvil) */
+  @media (max-width: 767.98px) {
+    #menuDropdownSm {
+      background: var(--blanco) !important;
+      color: var(--azul-marino) !important;
+      border-radius: 5px;
+      border: 2px solid var(--azul-marino);
+      font-weight: 500;
+      transition: all 0.2s;
+      min-width: 140px;
+      text-align: center;
+    }
+    #menuDropdownSm:hover,
+    #menuDropdownSm:focus {
+      background: var(--azul-marino) !important;
+      color: var(--blanco) !important;
+      border-color: var(--blanco)!important;
+    }
+    .dropdown-menu[aria-labelledby="menuDropdownSm"] {
+      border-radius: 8px;
+      margin-top: 0.5rem;
+      min-width: 180px;
+      background: var(--blanco);
+    }
+    .dropdown-menu[aria-labelledby="menuDropdownSm"] .dropdown-item {
+      color: var(--azul-marino);
+      background: var(--blanco);
+      border-radius: 5px;
+      margin: 2px 0;
+      transition: all 0.2s;
+    }
+    .dropdown-menu[aria-labelledby="menuDropdownSm"] .dropdown-item:hover {
+      background: var(--azul-marino);
+      color: var(--blanco);
+    }
+  }
+  
+  /* ===================================================
+     🖼️ Logo Navbar
+  =================================================== */
+  @media (max-width: 767.98px) {
+    .logo-navbar {
+      height: 70px !important;
+      width: auto !important;
+      max-height: 70px !important;
+      object-fit: contain !important;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    .logo-navbar {
+      height: 100px !important;
+      width: auto !important;
+      max-height: 100px !important;
+      object-fit: contain !important;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+  /* ==========================================
+   BOTONES
+   ========================================== */
+.btn-azulmarino {
+    background: #003366;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.45em 1.2em;
+    font-weight: 500;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.btn-azulmarino:hover, 
+.btn-azulmarino:focus {
+    background: #002147;
+    color: #fff;
+    outline: none;
+}
+.navbar-light .navbar-nav .nav-link[href$="/admin/RespaldoBBDD"],
+.navbar-light .navbar-nav .nav-link[href$="/admin/RespaldoBBDD"]:hover,
+.navbar-light .navbar-nav .nav-link[href$="/admin/RespaldoBBDD"].active,
+.dropdown-menu .dropdown-item[href$="/admin/RespaldoBBDD"],
+.dropdown-menu .dropdown-item[href$="/admin/RespaldoBBDD"]:hover,
+.dropdown-menu .dropdown-item[href$="/admin/RespaldoBBDD"].active {
+    color: var(--amarillo-estrella) !important;
+}

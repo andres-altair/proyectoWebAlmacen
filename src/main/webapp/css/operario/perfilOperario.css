@@ -1,0 +1,515 @@
+:root {
+    --azul-marino: #003366;
+    --azul-marino-claro: #004488;
+    --gris-oscuro: #2C3E50;
+    --gris-claro: #F4F4F4;
+    --blanco: #FFFFFF;
+    --borde: #e0e6ed;
+    --amarillo-estrella: #FFA500;
+  
+    --verde-exito: #2ecc71;
+    --rojo-error: #C0392B;
+  }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--gris-claro);
+    color: var(--gris-oscuro);
+    margin: 0;
+  }
+  .perfil-container {
+    background: var(--blanco);
+    max-width: 480px;
+    margin: 32px auto;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+    border: 1.5px solid var(--borde);
+    padding: 2.5em 2em 2em 2em;
+    position: relative;
+  }
+  .perfil-container h2 {
+    text-align: center;
+    color: var(--azul-marino);
+    font-weight: 700;
+    margin-bottom: 1.2em;
+  }
+  .form-group {
+    margin-bottom: 1.3em;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+  label {
+    font-weight: 500;
+    color: var(--azul-marino);
+    margin-bottom: 0.3em;
+    display: block;
+  }
+  input[type="text"], input[type="file"] {
+    width: calc(100% - 4px);
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    border: 1.5px solid var(--borde);
+    background: var(--gris-claro);
+    color: var(--gris-oscuro);
+    font-size: 1em;
+    transition: border 0.2s;
+    box-sizing: border-box;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  input[type="text"]:focus, input[type="file"]:focus {
+    border-color: var(--azul-marino-claro);
+    outline: none;
+  }
+  .foto-preview {
+    display: block;
+    margin: 1em auto 1.5em auto;
+    max-width: 100%;
+    max-height: 220px;
+    border-radius: 8px;
+    border: 2.5px solid var(--azul-marino-claro);
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    background: var(--gris-claro);
+    object-fit: contain;
+  }
+  .msg {
+    color: var(--verde-exito);
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+  .error {
+    color: var(--rojo-error);
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+  .btn, .btn-azulmarino {
+    background: #003366;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.55em 1.5em;
+    font-weight: 500;
+    border: none;
+    font-size: 1.1em;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+  }
+  .btn:hover, .btn-azulmarino:hover, .btn:focus, .btn-azulmarino:focus {
+    background: #002147;
+    color: #fff;
+    outline: none;
+  }
+  hr {
+    margin: 2em 0 1.5em 0;
+    border: none;
+    border-top: 1.5px solid var(--borde);
+  }
+  .perfil-container h4 {
+    color: var(--azul-marino-claro);
+    margin-bottom: 0.7em;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .perfil-container pre {
+    font-size: 13px;
+    background: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    color: var(--gris-oscuro);
+  }
+  @media (max-width: 900px) {
+    .perfil-container {
+      max-width: 98vw;
+      padding: 2em 1em 1.5em 1em;
+    }
+  }
+  @media (max-width: 600px) {
+    .perfil-container {
+      max-width: 100vw;
+      padding: 1.2em 0.3em 1.5em 0.3em;
+    }
+    .perfil-container h2 {
+      font-size: 1.3em;
+    }
+    .form-group label {
+      font-size: 0.97em;
+    }
+    input[type="text"], input[type="file"] {
+      font-size: 0.98em;
+      padding: 0.5em 0.7em;
+    }
+    .foto-preview {
+      max-width: 80px;
+      max-height: 80px;
+    }
+    .perfil-container pre {
+      font-size: 12px;
+      padding: 0.7em;
+    }
+    .btn, .btn-azulmarino {
+      font-size: 0.97em;
+      padding: 0.45em 1em;
+    }
+  }
+  @media (max-width: 400px) {
+    .perfil-container {
+      padding: 0.7em 0.1em 1em 0.1em;
+    }
+    .perfil-container h2 {
+      font-size: 1.1em;
+    }
+    .perfil-container pre {
+      font-size: 11px;
+      padding: 0.5em;
+    }
+  }
+  
+  
+  /* Espaciado uniforme entre botones navbar LG+ (ajustado para flex-grow) */
+  @media (min-width: 992px) {
+      .navbar-nav {
+          gap: 8rem;
+      }
+      .navbar-nav > .nav-item.flex-grow-1 {
+          margin: 0 !important;
+          padding: 0 !important;
+          min-width: 0;
+          width: 100%;
+      }
+  }
+  
+  
+  
+  /* Botones navbar LG+: fondo blanco, letras azul marino, hover azul marino fondo y letras blancas */
+  @media (min-width: 992px) {
+      .navbar-nav > .nav-item.d-lg-block .nav-link,
+      .navbar-nav > .nav-item.d-lg-block .dropdown-toggle {
+          background: var(--blanco) !important;
+          color: var(--azul-marino) !important;
+          border-radius: 5px;
+          transition: all 0.2s;
+          border: 2px solid var(--azul-marino);
+          font-weight: 500;
+          min-width: 180px;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          text-align: center;
+          white-space: nowrap;
+      }
+      .navbar-nav > .nav-item.d-lg-block .nav-link:hover,
+      .navbar-nav > .nav-item.d-lg-block .dropdown-toggle:hover,
+      .navbar-nav > .nav-item.d-lg-block .nav-link.active {
+          background: var(--azul-marino) !important;
+          color: var(--blanco) !important;
+          border-color: var(--blanco);
+      }
+      .navbar-nav > .nav-item.d-lg-block .dropdown-menu {
+          border-radius: 8px;
+          margin-top: 0.5rem;
+      }
+      .navbar-nav > .nav-item.d-lg-block .dropdown-menu .dropdown-item {
+          color: var(--azul-marino);
+          background: var(--blanco);
+          border-radius: 5px;
+          margin: 2px 0;
+          transition: all 0.2s;
+      }
+      .navbar-nav > .nav-item.d-lg-block .dropdown-menu .dropdown-item:hover {
+          background: var(--azul-marino);
+          color: var(--blanco);
+      }
+      .table-container-lg {
+          margin-left: 3rem;
+          margin-right: 3rem;
+      }
+  }
+  
+  /* Logo SIEMPRE 70px de alto en XS y SM (<768px) */
+  @media (max-width: 767.98px) {
+      #menuDropdownSm {
+          background: var(--blanco) !important;
+          color: var(--azul-marino) !important;
+          border-radius: 5px;
+          border: 2px solid var(--azul-marino);
+          font-weight: 500;
+          transition: all 0.2s;
+          min-width: 140px;
+          text-align: center;
+      }
+      #menuDropdownSm:hover,
+      #menuDropdownSm:focus {
+          background: var(--azul-marino) !important;
+          color: var(--blanco) !important;
+          border-color: var(--blanco)!important;
+      }
+      .dropdown-menu[aria-labelledby="menuDropdownSm"] {
+          border-radius: 8px;
+          margin-top: 0.5rem;
+          min-width: 180px;
+          background: var(--blanco);
+      }
+      .dropdown-menu[aria-labelledby="menuDropdownSm"] .dropdown-item {
+          color: var(--azul-marino);
+          background: var(--blanco);
+          border-radius: 5px;
+          margin: 2px 0;
+          transition: all 0.2s;
+      }
+      .dropdown-menu[aria-labelledby="menuDropdownSm"] .dropdown-item:hover {
+          background: var(--azul-marino);
+          color: var(--blanco);
+      }
+  
+      .logo-navbar {
+          height: 70px !important;
+          width: auto !important;
+          max-height: 70px !important;
+          min-width: unset !important;
+          min-height: unset !important;
+          object-fit: contain !important;
+          display: block;
+          margin: 0;
+          padding: 0;
+      }
+  }
+  
+  /* Logo SIEMPRE 100px de alto en MD y superior (>=768px) */
+  @media (min-width: 768px) {
+      .logo-navbar {
+          height: 100px !important;
+          width: auto !important;
+          max-height: 100px !important;
+          min-width: unset !important;
+          min-height: unset !important;
+          object-fit: contain !important;
+          display: block;
+          margin: 0;
+          padding: 0;
+      }
+  }
+  
+  /* Botones navbar MD: igual formato que LG+ */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+      .navbar-nav > .nav-item.d-md-block .nav-link,
+      .navbar-nav > .nav-item.d-md-block .dropdown-toggle {
+          background: var(--blanco) !important;
+          color: var(--azul-marino) !important;
+          border-radius: 5px;
+          transition: all 0.2s;
+          border: 2px solid var(--azul-marino);
+          font-weight: 500;
+          min-width: 180px;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          text-align: center;
+          white-space: nowrap;
+          margin: 0 0.5rem;
+      }
+      .navbar-nav > .nav-item.d-md-block .nav-link:hover,
+      .navbar-nav > .nav-item.d-md-block .dropdown-toggle:hover,
+      .navbar-nav > .nav-item.d-md-block .nav-link.active {
+          background: var(--azul-marino) !important;
+          color: var(--blanco) !important;
+          border-color: var(--blanco);
+      }
+      .navbar-nav > .nav-item.d-md-block .dropdown-menu {
+          border-radius: 8px;
+          margin-top: 0.5rem;
+      }
+      .navbar-nav > .nav-item.d-md-block .dropdown-menu .dropdown-item {
+          color: var(--azul-marino);
+          background: var(--blanco);
+          border-radius: 5px;
+          margin: 2px 0;
+          transition: all 0.2s;
+      }
+      .navbar-nav > .nav-item.d-md-block .dropdown-menu .dropdown-item:hover {
+          background: var(--azul-marino);
+          color: var(--blanco);
+      }
+  }
+  
+  /* --- Tablas modernas para alquiler.jsp --- */
+  
+  .alquiler-table, .sectores-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--blanco);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+  }
+  .alquiler-table th, .sectores-table th {
+      background: var(--azul-marino);
+      color: var(--blanco);
+      font-weight: 600;
+      padding: 1rem 0.75rem;
+      border: none;
+      text-align: center;
+  }
+  .alquiler-table td, .sectores-table td {
+      padding: 0.9rem 0.75rem;
+      border-bottom: 1px solid var(--gris-claro);
+      text-align: center;
+      vertical-align: middle;
+      background: var(--blanco);
+      font-size: 1rem;
+  }
+  .alquiler-table tr:last-child td, .sectores-table tr:last-child td {
+      border-bottom: none;
+  }
+  .alquiler-table tbody tr:hover, .sectores-table tbody tr:hover {
+      background: var(--azul-marino-claro);
+      color: var(--blanco);
+      transition: background 0.2s, color 0.2s;
+  }
+  /* Ajusta el ancho mínimo de los <th> en la tabla de sectores libres */
+  .sectores-table th {
+      min-width: 120px;
+  }
+  .sectores-table th:nth-child(1) { min-width: 80px; }
+  .sectores-table th:nth-child(2) { min-width: 110px; }
+  .sectores-table th:nth-child(3) { min-width: 120px; }
+  .sectores-table th:nth-child(4) { min-width: 150px; }
+  
+  /* Ajusta también celdas para que el contenido no desborde */
+  .sectores-table td {
+      min-width: 80px;
+      word-break: break-word;
+  }
+  /* Centrar el botón de pago dentro del <td> de acción */
+  .sectores-table td:last-child form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+  }
+  /* Botón de pago moderno */
+  .payment-button {
+      background: var(--amarillo-estrella);
+      color: var(--azul-marino);
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+  .payment-button:hover {
+      background: var(--azul-marino);
+      color: var(--blanco);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  }
+  
+  /* Centrado fuerte para mensajes vacíos de tablas */
+  .text-center-empty-message {
+      text-align: center !important;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      font-size: 1.2rem;
+      color: var(--gris-oscuro-claro);
+      font-weight: 500;
+      padding: 1.2rem 0 0.7rem 0;
+  }
+  
+  /* Responsive para tablas */
+  @media (max-width: 767.98px) {
+      #menuDropdownSm {
+          background: var(--blanco) !important;
+          color: var(--azul-marino) !important;
+          border-radius: 5px;
+          border: 2px solid var(--azul-marino);
+          font-weight: 500;
+          transition: all 0.2s;
+          min-width: 140px;
+          text-align: center;
+      }
+      #menuDropdownSm:hover,
+      #menuDropdownSm:focus {
+          background: var(--azul-marino) !important;
+          color: var(--blanco) !important;
+          border-color: var(--blanco);
+      }
+      .dropdown-menu[aria-labelledby="menuDropdownSm"] {
+          border-radius: 8px;
+          margin-top: 0.5rem;
+          min-width: 180px;
+          background: var(--blanco);
+      }
+      .dropdown-menu[aria-labelledby="menuDropdownSm"] .dropdown-item {
+          color: var(--azul-marino);
+          background: var(--blanco);
+          border-radius: 5px;
+          margin: 2px 0;
+          transition: all 0.2s;
+      }
+      .dropdown-menu[aria-labelledby="menuDropdownSm"] .dropdown-item:hover {
+          background: var(--azul-marino);
+          color: var(--blanco);
+      }
+  
+      .alquiler-table, .sectores-table {
+          font-size: 0.9rem;
+      }
+      .alquiler-table th, .sectores-table th, .alquiler-table td, .sectores-table td {
+          padding: 0.6rem 0.3rem;
+      }
+  }
+  /* Mis Alquileres color amarillo estrella en navbar (siempre, incluso hover y active, máxima especificidad) */
+  .navbar-light .navbar-nav .nav-link[href$="/operario/perfil"],
+  .navbar-light .navbar-nav .nav-link[href$="/operario/perfil"]:hover,
+  .navbar-light .navbar-nav .nav-link[href$="/operario/perfil"].active,
+  .dropdown-menu .dropdown-item[href$="/operario/perfil"],
+  .dropdown-menu .dropdown-item[href$="/operario/perfil"]:hover,
+  .dropdown-menu .dropdown-item[href$="/operario/perfil"].active {
+      color: var(--amarillo-estrella) !important;
+  }
+  
+  /* Footer */
+  html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .footer, footer {
+    background: var(--azul-marino);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: 0;
+    flex-shrink: 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 !important;
+  }
+  footer p {
+    margin: 0;
+    font-size: 18px;
+    color: var(--blanco);
+  }

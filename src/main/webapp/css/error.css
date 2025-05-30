@@ -1,0 +1,125 @@
+:root {
+    --azul-marino: #003366;
+    --azul-marino-claro: #004488;
+    --amarillo-estrella: #FFA500;
+    --amarillo-oscuro: #CC8400;
+    --rojo-coral: #E74C3C;
+    --rojo-oscuro: #C0392B;
+    --gris-oscuro: #2C3E50;
+    --gris-oscuro-claro: #3d5266;
+    --gris-claro: #F4F4F4;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --verde-exito: #28a745;
+    --naranja-proceso: #fd7e14;
+}
+
+/* ================================
+   RESET & BASE
+================================== */
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* ================================
+   NAVBAR ERROR PERSONALIZADA
+================================== */
+.navbar-error {
+    background-color: var(--azul-marino) !important; /* Azul marino */
+    color: var(--blanco) !important;
+    justify-content: center;
+    min-height: 110px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    box-shadow: 0 4px 16px rgba(16,37,66,0.08);
+}
+
+.navbar-error .navbar-title {
+    color: var(--blanco) !important;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navbar-error .navbar-logo img {
+    max-height: 90px;
+    width: auto;
+    margin: 0 auto 12px auto;
+    display: block;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    text-align: center;
+}
+
+.error-container p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--azul-marino);
+    margin-bottom: 24px;
+}
+
+.error-container .btn {
+    font-size: 1.2rem;
+    padding: 12px 32px;
+    background-color: var(--azul-marino) !important;
+    color: var(--blanco) !important;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.error-container .btn:hover, .error-container .btn:focus {
+    background-color: var(--azul-marino-claro) !important;
+    color: var(--blanco) !important;
+    text-decoration: none;
+}
+
+/* ================================
+   FOOTER
+================================== */
+.footer,
+footer {
+  background: var(--azul-marino);
+  color: var(--blanco);
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto;
+  margin-left: 0;
+  margin-right: 0;
+  flex-shrink: 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 !important;
+}
+footer p {
+  margin: 0;
+  font-size: 18px;
+  color: var(--blanco);
+}
