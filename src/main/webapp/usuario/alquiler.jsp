@@ -132,7 +132,6 @@
                     <th>Sector</th>
                     <th>Fecha Inicio</th>
                     <th>Fecha Fin</th>
-                    <th>Precio</th>
                 </tr>
                 <c:forEach var="alquiler" items="${alquileres}">
                     <c:if test="${alquiler.estado == 1}">
@@ -141,14 +140,7 @@
                         <td>${alquiler.sectorId}</td>
                         <td><fmt:formatDate value="${alquiler.fechaInicioDate}" pattern="dd-MM-yyyy HH:mm"/></td>
                         <td><fmt:formatDate value="${alquiler.fechaFinDate}" pattern="dd-MM-yyyy HH:mm"/></td>
-                        <td>
-                            <c:forEach var="sector" items="${sectoresLibres}">
-                                <c:if test="${sector.id == alquiler.sectorId}">
-                                    €${sector.precio}
-                                </c:if>
-                            </c:forEach>
-                        </td>
-                    </tr>
+                        </tr>
                     </c:if>
                 </c:forEach>
             </table>
