@@ -74,7 +74,7 @@ public class PedidosTransportistaServlet extends HttpServlet {
     // Obtener pedidos procesados y enviando del transportista
     String procesadosJson = pedidoServicio.listarPedidosPorEstado("procesado");
     String enviandoJson = pedidoServicio.listarPedidosPorEstadoYTipo("enviando", "transportistaId", usuario.getId());
-    String entregadosJson = pedidoServicio.listarPedidosPorEstado("entregado");
+    String entregadosJson = pedidoServicio.listarPedidosPorEstadoYTipo("entregado", "transportistaId", usuario.getId());
 
 
     // CORRECCIÓN: Parsear JSON a lista de objetos
