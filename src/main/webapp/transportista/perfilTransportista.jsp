@@ -114,6 +114,7 @@
     <h2>Mi Perfil Transportista</h2>
     <% if (mensaje != null) { %>
         <div class="msg"><%= mensaje %></div>
+        <c:remove var="mensaje" scope="session"/>
     <% } %>
     <% if (error != null) { %>
         <div class="error"><%= error %></div>
