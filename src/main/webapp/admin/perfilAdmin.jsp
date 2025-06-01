@@ -112,6 +112,7 @@
         <h2>Mi Perfil</h2>
         <% if (mensaje != null) { %>
             <div class="msg"><%= mensaje %></div>
+        <c:remove var="mensaje" scope="session"/>
         <% } %>
         <c:if test="${not empty error}">
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
