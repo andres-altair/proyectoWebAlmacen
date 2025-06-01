@@ -150,7 +150,7 @@
                    <div class="modal fade" id="modalEstadoIncidencia${incidencia.id}" tabindex="-1" aria-labelledby="modalEstadoIncidenciaLabel${incidencia.id}" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
-                        <form method="post" action="${pageContext.request.contextPath}/admin/incidencia">
+                        <form method="post" action="${pageContext.request.contextPath}/gerente/incidencia">
                           <input type="hidden" name="accion" value="cambiarEstado" />
                           <div class="modal-header">
                             <h5 class="modal-title" id="modalEstadoIncidenciaLabel${incidencia.id}">Cambiar Estado de Incidencia</h5>
