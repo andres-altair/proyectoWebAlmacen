@@ -39,7 +39,7 @@ public class IncidenciaGerenteServlet extends HttpServlet {
         }
         HttpSession sesion = peticion .getSession(false);
         UsuarioDto gerenteActual = (UsuarioDto) sesion.getAttribute("usuario");
-        // Verificar si el usuario tiene permisos de administrador
+        // Verificar si el usuario tiene permisos de administrador o no 
         if (gerenteActual.getRolId() != 2) {
             GestorRegistros.warning(((com.andres.gestionalmacen.dtos.UsuarioDto) usuario).getId(), 
                 "Intento no autorizado de acceso al panel de incidencias. Rol actual: " + ((com.andres.gestionalmacen.dtos.UsuarioDto) usuario).getRolId());
@@ -110,6 +110,16 @@ public class IncidenciaGerenteServlet extends HttpServlet {
                 }
                 peticion .getRequestDispatcher("/gerente/incidenciasGerente.jsp").forward(peticion, respuesta);
             }
+        }else if("cambiarEstado".equals(accion)){
+            Long id = Long.valueOf(peticion.getParameter("id"));
+            String estado = peticion.getParameter("estado");
+            try {
+                incidenciaServicio.cambiarEstado(id, IncidenciaDto.Estado.valueOf(estado));
+                GestorRegistros.info(usuario.getId(), "Estado de incidencia cambiado. Incidencia ID: " + id + ", Nuevo estado: " + estado);
+            } catch (IllegalArgumentException e) {
+                GestorRegistros.warning(usuario.getId(), "Valor de estado inválido recibido en cambio de incidencia: " + estado);
+            }
+            respuesta.sendRedirect(peticion.getContextPath() + "/gerente/incidencia");
         }
     }
 }
